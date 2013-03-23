@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- AVE CIVI! Thanks for reading the code. This is just a quick and dirty page to announce the proposal for the civitas game
+			if you're an interested coder please check out the project on Github, my username is munjeli
+			You can download the proposal as a pdf at http://civitasarg.org/civitasarg.pdf
+			One thing I can say is there will be probably be a fair amount of jquery goodness come out of this project,
+			the politarch profiles feature is a potential showcase for data viz with civic information apis-->
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>Civitas ARG</title>
+		<meta name="description" content="An Augmented Reality Game and Transmedia Story for Civic Engagement with Youth" />
+		<meta name="author" content="Ele Munjeli" />
+
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<script type="text/javascript" src='js/jquery-1.9.1.js'></script>
+				
+		<style>
+		html{
+			width: 100%;
+			height: 100%;
+			background-image:url('images/columns-background-image.jpg');
+			background-repeat:no-repeat;
+			background-size:cover;
+			overflow: hidden;
+			
+		}
+		
+		body{
+			width: 100%;
+			max-width: 970px;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: 0px;
+			height: 100%;
+			font:  1em "Palatino Linotype", "Book Antiqua", Palatino, serif;
+			
+		}
+		
+		#wrapper{
+			height: 75%;
+			margin-top:15%;
+			width: 100%;
+			max-width: 970px;
+		}
+		
+		nav{
+			height: 30px;
+			width: 100%;
+			max-width: 950px;
+			margin-left: 20px;
+			font-weight: 900;
+			text-align: center;
+			font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+			color: #4b4a58;
+			
+		}
+		
+		.linkspan{
+			margin: 0 5px 10px 0;
+			padding: 0 3px 0 3px;
+			background: #b0b3ba;
+			opacity: .8;
+			
+		}
+		
+		.linkspan:visited{
+			color: #000000;
+			background: #b0b3ba;
+			opacity: 1;		
+		}
+		
+		.linkspan:hover{
+			color: #dedfe3; 
+			background:#7a1503;
+			opacity: 1;			
+		}
+		.linkspan:active{
+			color: #000000;
+			background:#b0b3ba;
+			opacity:1;
+		}
+		
+		#content {
+			height: 65%;
+			position: absolute;
+			width: 100%;
+			max-width: 950px;
+			background:#b0b3ba;
+			opacity: .9;
+			border: double 8px #4b4a58;
+			overflow-y: scroll;
+			margin-left: 20px;
+			
+		}
+		
+		.dynodiv{
+			margin: 15px;
+			
+		}
+		
+		#narrative{
+			text-align:justify;
+			margin: 0 150px 0 0;
+			 
+		}
+		
+		h3{
+			font-size: 1.3em;
+			color:#4b4a58;
+			font-style: italic;
+			margin: 0 0 10px 0; 
+		}
+		
+		p{
+			margin: 0 0 10px 0;
+		}
+		</style>
+		
+		<script type='text/javascript'>
+			$(document).ready( function(){
+				
+				$('div.dynodiv').hide();
+				$('div#STORY').show();
+				
+			
+			//action on the nav links
+			$('.linkspan').click( function(){
+					var contentname = $(this).html();
+					$('div#' + contentname).show();
+					$('.dynodiv').not('div#' + contentname).hide();					
+											
+			});
+				
+				
+			});
+		</script>
+		<!-- google analytics-->
+		<script type="text/javascript">
+		
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-38945554-1']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		
+		</script>
+
+	</head>
+
+	<body>
+		<div id='wrapper'>
+			<nav>
+				<span class='linkspan'>STORY</span>
+				<span class='linkspan'>GAME</span>
+				<span class='linkspan'>DATA</span>
+				<span class='linkspan'>MISSION</span>
+				<span class='linkspan'>TECH</span>
+				<span class='linkspan'>ABOUT</span>
+			</nav>
+		<div id='content'>
+			<div class='dynodiv' id='STORY'>
+				<div id='narrative'>
+					<p style='font-size: 1.3em;'><b><i>Ave Civi!</i></b></p>	
+					<p>The city needs your voice! The Politarchs no longer represent the people; they grow more fat and greedy each passing season. Instead of representation, the citizenry gets fed bread and circuses. Our own complacency has allowed the Politarchs to serve only themselves.</p>
+					<p>The Politarchs are thespians and crooks as much as politicians. With money and media on their side, they no longer need to address issues. They ignore the needs of the city, instead using their influence to fill their own pockets.</p>
+					<p>There was a time when democracy flourished in our land. A time when citizens represented themselves and fought for their rights in public forums using their own rhetoric. A time when both oratory and virtue were needed to sway the masses. These are weapons you still possess, Citizen, if you would dare use them.</p>
+					<p>For now Politarchs still make use of the trappings of the old republic. We must act before it is too late and the Politarchs burn the last remnants of democracy to the ground. We must confront them in public discourse where they are forced to be held accountable for their spectacle!</p>
+					<p>Join us, Citizen, as we confront the Politarchs in public forums, in committees, in conventions. We are the active citizenry, intent on restoring representation and discourse in our government. Democracy’s honor is not yet lost; its luster can be restored. Cast off your apathy and demand to be heard!</p>
+				</div>
+			</div>
+			<div class='dynodiv' id='GAME'>
+				<h3>The Game</h3>
+				<p>Set in a dystopian postmodern version of ancient Rome, heroic Citizens fight for causes against villains in the Politarchy (Political Class), elected officials who play the electorate like thespians and abandon representation once in office. Corrupted Politarchs are protected by the bureaucracy of the state and bribed by Etairia (Corporations). A new generation of Citizen activists use sophisticated social technologies to restore the integrity of the once noble republic by organizing protests and forming alliances within the Politarchy for representation and justice.</p>
+				<p><b>Augmented Reality Game (ARG):</b> A game where the player’s view of a physical, real world environment is augmented by computer generated sensory input such as sound, graphics, video, or GPS data. </p>
+				<p><b>Transmedia Storytelling: </b>The technique of telling a story across multiple platforms and formats using current digital technologies. It involves creating content to engage an audience by permeating their daily lives. Pieces of content, some of which may be user created, are overtly or subtly linked across platforms in narrative synchronization with each other.</p>
+				<p><b>Civitas</b> is an Augmented Reality Game and Transmedia Story with two parts: website and mobile application. The game promotes civic engagement by awarding points and badges for good citizenship, specifically offline political action. Premium points are for actions which place the player in contact with their elected representatives. Citizens mark local political concerns on a map, open a thread to discuss action in the Forum, and ratify an action with a vote. The action appears on a map and calendar as an event which any Citizen can attend and support.</p>
+				<p>Let's break it down to the actual process for a user: first, the Citizen (player) will click through a splash page and find a map of their city. On the map are Discussions and Events, the categories recognizable by distinctly colored markers. If an Event is scheduled on the map, if you click on the marker you can see where, when, and how many Citizens have committed to attend. Anyone can add an Event; ongoing protests and political happenings can be added by simply logging  in, dragging a marker, and adding a description. This makes the event available for Citizens to commit and attend. Civitas players can design their own protests, from attending City Council meetings to raucous toga parties on the steps of the Capitol Building. Players gain points by creating entertaining, well attended events around political concerns.</p>
+				<p>Another level of achievement comes from logging in and dropping a marker at an area of concern. This will open a discussion in the forum. Citizens can enter the discussion from the marker. The Citizen who dropped the original marker has administrative privileges including placing the discussion vote. Anyone can join in the discussion; when the participants decide on an action the creator of the thread can post a vote to ratify the action, time, and location. There's a search feature to in the application to help navigate the web to find political content; it can suggest city council meetings, statewide information, the right elected officials to approach. There is no quorum in this situation; anyone logged in can participate and vote. Ratification is determined by a majority vote 'Aye' bye the interested voters in a limited time frame (for example three days). If the Citizens vote ‘Nay’, the deliberation continues until the thread is closed by the original creator, or the Citizens successfully ratify an event. </p>
+				<p>Comments are ranked in the discussion according to their applause: other players can choose from 0 to 5 hands to represent applause for a comment. Applause in the forum becomes part of each Citizen’s overall standing, they carry it with their avatar and username as a number below their avatar along with an automatic game tally reflecting overall participation. The story of Civitas encourages traditional oratory and rhetorical skills to prepare the Citizens for confrontations with professionals of the Politarchy. </p>
+				<p>No email or phone campaigns are allowed. Citizens get points for attending events by checking in with a mobile app using GPS or authorized kiosk (see Extensions on the Tech page for ideas on portable checkin systems) at the time and location specified. The map and forum are open to public view, but to add comments on the forum or add event and discussions to the map, a Citizen must login. There is no system of backroom deliberation in Civitas, all the data is publicly viewable. The result is a database of discussions and related political actions in the community which anyone can discover and browse. </p>
+				<p>Citizens are only identified online with their chosen username and avatar. There are options to share to social networks from a discussion in the forum and while attending an event. Privacy is important to Civitas, and the application requires no more than a valid email and username for citizenship. People who have no right to vote in the United States, such as minors or illegal aliens, still can be Citizens within the application. They are politically important and have rights equal to all. While players gain in rank by participation, they don’t have special access privileges within the application: rather, they gain Auspices, or bonus points, to grant to events or discussions they want to support. </p>
+				<p>Following an event, Citizens are invited to rate the Politarchs they encountered (if the event took place in the presence of a Politarch, such as a City Council meeting or other official venue). Politicians are rated on three criteria: Rhetoric, Civic-mindedness, and Authenticity. The Citizen answers three questions either Yes, No, or Abstain (not enough information, or I don’t know) to demonstrate a simple score and the Citizen can add a comment to elaborate their opinion. These Politarch Profiles are part of the Search feature in Civitas. The Politarch scores are represented with a graph resembling an abacus and the total number of respondents. This simple graphic shows whether the majority of encounters have been positive or negative within the game. The structure of the rating inhibits scoring the Politarchs for their stance on an issue; rather we observe the integrity of their communication, thier ability to cooperate with the Citizenry, and their sincerity.</p>
+				<p>Politarch profiles can further be tagged for issues in order to find persons helpful or obstructive to given causes. In some cases, the solution to an issue may be found through personnel. Civitas recognizes dedicated and cooperative officials, and labels those who neglect or deceive the Citizenry.  </p>
+				<p>Finished events can be rated and accessed by Citizens through the History tab of the application to help inform future action. There will be a feature for organizers to post their lessons learned and suggest follow up action for interested parties. </p>
+			</div>
+			<div class='dynodiv' id='DATA'>
+				<h3>Data and Beneficiaries</h3>
+				<p>Youth is getting poorer. According to a report by the Pew Research Center “Households headed by older adults have made dramatic gains relative to those headed by younger adults in their economic well-being over the past quarter of a century”.<sup>1</sup> The cost of necessary education is financially disabling to many young adults, and the cost of housing has prohibited them from owning property. Young people are poorly represented in many elections, and their interests are politically neglected. Current methods of polling often exclude youth since they are transient renters rather than homeowners. Social media data is provocative, but may not include firm information on the concerns of local populations. </p>
+				<p>Civic engagement initiatives that bother to target youth are often expository or informative- methods which reflect the old paradigm of ‘Civic Education’ with all of the prejudices of the educational system. As one young man commented to me, “They just tell you how the system works”. Civitas takes a more interactive approach. It requests the players show us <i>how they can work the system. </i>It relies on the toolkit digital natives possess to document their own political interests and actions, and ties them to solid geographic data. </p>
+				<p>A fundamental objective of Civitas is to be a low cost provider of hyperlocal political data targeting youth, an underserved population. Leveraging user generated data, the application can assist political initiatives and urban policy decisions. All of the information on the map and in the forums is Open Data. Currently, the press only hears of a protest if the protesters submit a press release or actively promote their activities. With Civitas, established media can subscribe to feeds or monitor the map to see political action forming across the spectrum of causes. Each event has a button for users to commit to attend, so large protests are visible as they grow in advance of the date. This is useful since we often measure the success of political events by the number of attendees. </p>
+				<p>Civitas is also an innovative solution for nonpartisan civic engagement. It establishes a forum where people can learn and practice political activism for the good of our nation and our state. The rewards of civic engagement with Civitas are more significant because of the entertainment value of a social game. Players can follow tags in the application and discover new organizations and make contacts according to their interests. Groups with similar agendas will have a common virtual space to identify themselves and organize together. People with experience protesting only in a limited cause may find themselves uniting with disparate interests to be active for a greater good. There could even arise a cadre of power protestors, who protest anything for the sake of social initiative and points in the game: these players could be a valuable resource for understanding the dynamics of subcultures within the activist spectrum. </p>
+				<p><i>1 Richard Fry, D’Vera Cohn, Gretchen Livingston and Paul Taylor. The Rising Age Gap in Economic Well-Being | Pew Social &amp; Demographic Trends, n.d. <a href='http://www.pewsocialtrends.org/2011/11/07/the-rising-age-gap-in-economic-well-being/' target="_blank">http://www.pewsocialtrends.org/2011/11/07/the-rising-age-gap-in-economic-well-being/ </a></i></p>
+			</div>
+			<div class='dynodiv' id='MISSION'>
+				<h3>Mission and Social Value</h3>
+				<p>The culture of Civitas encourages critical thinking  by celebrating classical oratory and rhetoric. The application is designed to produce Citizens with public speaking and presentation skills to confront political professionals. The storyline doesn’t endorse a utopian view of citizenship: ancient Rome had slavery; women couldn’t vote; Jews and Christians were ruthlessly persecuted; and bloody wars were fought in the name of the Empire. Our own role on the world stage has similar challenges. How do we defend our rights and improve our governance? These questions have no easy answers and unfortunately, our culture has made political discussion unseemly, even taboo. </p>
+				<p>Civitas addresses the inhibition of political culture by promoting local, issue-based political action. Two people on opposite ends of the political spectrum nationally may well share the same views on development in their own neighborhood. By meeting over a relevant local issue, they might come to discuss opinions of the greater stage- state or national issues. But they will do so from common ground, and with a voluntarily established relationship. They’ll also meet within the culture of the game itself: a culture which rewards civility, citizenship, critical thinking, and formal debate. These values of Civitas culture make discussion safe and productive for Citizens. </p>
+				<p>Political activity in Civitas is identified as celebratory and festive. The iconic event of the culture is a Toga Party. While some may criticize the approach for lack of gravitas, who can deny the importance of parties to social change? Long before the modern age, successful activism was promoted by music and other arts. After the 1976 Massacre in Soweto, the dance Toyi Toyi became a prominent method of protest in South Africa.<sup>2</sup> Activism in the sixties had a soundtrack of the folk revival. Nor should we doubt the power of joyful companionship in the face of oppression. In my discussions with dedicated activists, one factor that stands out is the integration of cause and society. The reward of their protest is not always political success, but they maintain participation for the warmth of the collective. For battles fought over generations, where protestors may have no individual memory of freedom or justice (such as the fight against Apartheid in South Africa or the American Civil Rights Movement), arts and festivals are critical to the persistence of values. </p>
+				<p><i>2 Wikipedia Entry: Toyi Toyi <a href='http://en.wikipedia.org/wiki/Toyi-toyi' target="_blank">http://en.wikipedia.org/wiki/Toyi-toyi</a></i></p>
+			</div>
+			<div class='dynodiv' id='TECH'>
+				<h3>Technology Specifications and Possible Extensions</h3>
+				<p><b>Code:</b> Typically for a New Media project, Civitas will be built using available Open Source Code leveraging Open APIs. The Maps feature will be built with the Google Maps API, the forum will be a custom interface of the maps feature with a open source forum application (possibly BBPress). Applause is ranked with a standard 5 star plugin customized to represent hands. The search feature will be built using Google’s Custom Search API and their Civic Information API. A plugin for social sharing will also appear in the forum for discussions. Mobile applications will be executed via the Android SDK and iPhone SDK, Windows Phone if there is demand.</p>
+				<p><b>Identity Architecture:</b> The only necessity for citizenship within the application is a valid username and email, which can be implemented natively through the forum, however, I will consider sign in with Google, since Google APIs are ubiquitous in the design. Social sharing is via a plugin or mobile SDKs demanding external authentication. Some discussion has be had already about providing verification within Civitas to tie a user to a location or voting district. This may be implemented with permission from the users as a backend feature. Verification would not be publicly visible (Civitas does not acknowledge the validity of national citizenship) but would be a service to researchers who want to collect a demographically representative sample for policy influence. Such verification will be handled by a third party service (charging a small amount to a credit card). Verification would be essential to any Politarch who wishes to participate in the Civitas ARG and claim their offline office. Verified Politarchs would wear a special badge to identify them within the community but have no special privilege. </p>
+				<p style="text-decoration: underline;"><b>Extensions</b></p>
+				<p>A characteristic of any ARG/Transmedia project is extensibility: information about the game may be transmitted through social networks; via multimedia presentations online; through offline books, comics, events. Less recognized is the implication of the extension of data and practice these modes produce. Beyond the game itself Civitas encourages new growth for civic engagement. </p>
+				<p><b>Events: </b>In ancient times, a conquering general was welcomed home to Rome with a celebratory Triumph. Civitas could promote regular events to recognize top players and feature them as speakers. The speakers could share their experience organizing and participating protest to educate the rest of the community. This would be a manner of celebrating the talent of effective activists as well. </p>
+				<p><b>Multimedia:</b> Transmedia projects consist of multiple channels of story and media. The deliberative community has discussed the necessity of publicizing dialogue and deliberation techniques; Civitas sets the stage for players to contribute content using these techniques and affirming the same values. </p>
+				<p><b>Civic Information API:</b> Currently, there is not very good support for activists to search their local government resources and understand effective activism. Nor is there effective means for political interests to search hyperlocal concerns. Surveys beg the question: user generated data demonstrates legitimate involvement. Since all of the data in the map and forum are Open Data, the application itself might eventually allow an API to provide detailed information on location, events, political involvement, political power. </p>
+				<p><b>Political Watchdog:</b>  Greater inspection of a political career naturally will improve representation. Politarch Profiles add a dimension to the usual Civic Information Data. I’d like to see a satellite site invite Politarchs to have online discussions with the players themselves and answer directly to their critics. </p>
+				<p><b>Hardware:</b> Following a lecture by Dr. Batya Friedman<sup>3</sup>, I’ve been considering methods of checking in people to events without a smartphone or wifi connection. Accessibility is critical to effective democracy. One solution would be a portable kiosk with basic components to allow users to sign in with their ID and password; the entry would be timestamped and uploaded later. The kiosk could be produced for next to nothing and released to a trusted administrator for a deposit as small as $5. There are methods to prevent fraud and data stealing with such a system, and it would enable participation without every player needing a device. This kind of system would be a prototype for online/offline event registration and implementation with a minimum of user commitment. </p>
+				<p><i>3 Dr Batya Friedman, The Shape of Being: Technology Design, Human Values, and the Future. Lecture Kane Hall, UW February 7, 2013 <a href='http://engage.washington.edu/site/MessageViewer?em_id=95561.0&dlv_id=100081' target="_blank">http://engage.washington.edu/site/MessageViewer?em_id=95561.0&amp;dlv_id=100081</a></i></p>			
+			</div>			
+			<div class='dynodiv' id='ABOUT'>
+				<h3>About Civitas</h3>
+				<p><img src='images/democracy-lab.jpg' style='float: left; margin: 0 15px 15px 0;'/>Civitas is a project in development with Democracy Lab, a 501(c)(3) nonprofit organization aspiring to revolutionize the nature of political dialogue.</br>
+				<a href="http://democracylab.org" target='_blank'>Visit the Democracy Lab webpage.</a></p>
+				<div style='clear: both;'>
+					<p><b>Ele Munjeli, Developer</b> Ele is a developer from CIRAL (the Civic Intelligence Research and Action Lab) at The Evergreen State College in Olympia, Washington. Her undergraduate research has focused on implementing the deliberative feature set for online applications. She is a member of the National Coalition for Dialogue and Deliberation and active in several professional groups working with online activism. </p>
+					<p><b>Ambrose Ingram, Game Designer</b> Ambrose has been passionate about writing stories and world building for role-playing games for the better part of ten years. His interests led him to a B.A. in History at the University of Wisconsin-Platteville in 2010. Ambrose is an avid fan of dystopian science fiction and at the moment is probably contentedly gaming in Southwestern Wisconsin.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</body>
+</html>
