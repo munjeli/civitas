@@ -21,7 +21,19 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
+function add_my_scripts() {
+	if(is_page_template('page-templates/maps-template.php')){
+		
+		wp_register_script( 'civitas-map', get_template_directory_uri() . '/js/civitas-map.js', array('jquery'));
+		wp_register_script('gmap3', get_template_directory_uri() . '/js/gmap3.min.js', array('jquery'));
+			
+		wp_enqueue_script('civitas-map');
+		wp_enqueue_script('google-maps','http://maps.googleapis.com/maps/api/js?key=AIzaSyCnAIvFm-zT9L-BTQ5teKRSBMHqbsjlz44&sensor=false');
+	}
+	else{}
+}
 
+add_action( 'wp_enqueue_scripts', 'add_my_scripts' );
 /**
  * Sets up the content width value based on the theme's design and stylesheet.
  */

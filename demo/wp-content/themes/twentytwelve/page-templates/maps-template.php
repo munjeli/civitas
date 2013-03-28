@@ -11,7 +11,10 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
-?><!DOCTYPE html>
+
+?>
+
+<!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
 <![endif]-->
@@ -19,7 +22,7 @@
 <html class="ie ie8" <?php language_attributes(); ?>>
 <![endif]-->
 <!--[if !(IE 7) | !(IE 8)  ]><!-->
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> style='overflow-y: hidden;'>
 <!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -28,6 +31,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -40,13 +44,7 @@
 	<header id="masthead" class="site-header" role="banner">
 		<hgroup>
 		<header class="entry-header">
-			<?php if ( is_single() ) : ?>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-			<?php else : ?>
-			<h1 class="entry-title">
-				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
-			</h1>
-			<?php endif; // is_single() ?>
+			<h1 class="entry-title">Olympia</h1>
 		</header><!-- .entry-header -->
 		</hgroup>
 
@@ -60,7 +58,7 @@
 
 	<div id="main" class="wrapper">
 
-	<div id="primary" class="map-content">
+	<div id="map-content">
 
 	</div><!-- #primary -->
 
