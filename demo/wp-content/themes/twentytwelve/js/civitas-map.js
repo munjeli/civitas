@@ -23,19 +23,15 @@ jQuery(document).ready(function ( $ ){
 							center:[47.043692,-122.89959],
 							zoom: 16,
 							mapTypeId:google.maps.MapTypeId.ROADMAP,
-							mapTypeControlOptions: {
-	           					mapTypeIds: [google.maps.MapTypeId.ROADMAP, "civistyle"]					
-							}
-						}
-					},
-						
-					styledmaptype:{
-					      id: "civistyle",
-					      options:{
-					        name: "Civistyle"
-				      },
-				      styles : [
-							  {
+							styles:  [
+							 {
+							  	featureType: "poi",
+							    elementType: "geometry.fill",
+							    stylers: [
+							      { visibility: "on" },
+							      { color: "#777777" }
+							    ]
+							  },{
 							   featureType: "water",
 							    stylers: [
 							      { color: "#294158" }
@@ -49,7 +45,7 @@ jQuery(document).ready(function ( $ ){
 							   featureType: "landscape.man_made",
 							    elementType: "geometry.fill",
 							    stylers: [
-							      { color: "#898980" }
+							      { color: "#999999" }
 							    ]
 							  },{
 							   featureType: "road.highway.controlled_access",
@@ -90,7 +86,7 @@ jQuery(document).ready(function ( $ ){
 							   featureType: "poi.park",
 							    elementType: "geometry.fill",
 							    stylers: [
-							      { color: "#485a4e" }
+							      { color: "#75857b" }
 							    ]
 							  },{
 							   featureType: "poi.government",
@@ -106,14 +102,14 @@ jQuery(document).ready(function ( $ ){
 							    ]
 							  },{
 							   featureType: "poi.medical",
+							   elementType: "labels.text.fill",
 							    stylers: [
-							      { color: "#a1b2c2" }
+							      { color: "#333333" }
 							    ]
 							  },{
 							   featureType: "poi.school",
 							    stylers: [
-							      { visibility: "off" },
-							      { color: "#a4abb7" }
+							      { visibility: "off" }
 							    ]
 							  },{
 							  },{
@@ -145,26 +141,28 @@ jQuery(document).ready(function ( $ ){
 							      { color: "#666666" }
 							    ]
 							  },{
-							    "featureType": "road.arterial",
-							    "elementType": "geometry.stroke",
-							    "stylers": [
-							      { "color": "#666666" }
+							    featureType: "road.arterial",
+							    elementType: "geometry.stroke",
+							    stylers: [
+							      { color: "#666666" }
 							    ]
 							  },{
-							    "featureType": "road.highway",
-							    "elementType": "labels.text.fill",
-							    "stylers": [
-							      { "color": "#494949" }
+							    featureType: "road.highway",
+							    elementType: "labels.text.fill",
+							    stylers: [
+							      { color: "#494949" }
 							    ]
 							  },{
-							    "featureType": "road.highway",
-							    "elementType": "labels.icon",
-							    "stylers": [
-							      { "visibility": "on" }
+							    featureType: "road.highway",
+							    elementType: "labels.icon",
+							    stylers: [
+							      { visibility: "on" }
 							    ]
 							  }
-							]						
-						}				
+							]
+						}
+					}						
+						//}				
 					});	
 			});
 		}

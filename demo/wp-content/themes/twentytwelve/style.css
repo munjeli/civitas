@@ -546,6 +546,35 @@ a:hover {
 	border: 1px solid #444;
 }
 
+.columned-content{
+	height: 100%;
+	width: 100%;
+	float: left;
+	background: #333333;
+
+}
+.column-style{
+	float: left;
+	position: relative;
+	top: -28px;
+	width: 200px; 
+	height:500px;
+	background-image:url('images/acanthus-column.jpg');
+	background-position: center top;
+	background-repeat: repeat-x;
+	overflow: hidden;
+}
+
+
+#calendar-content{
+	background: #999999;
+	border: 1px solid #444444;
+	width: 960px;
+	height: 500px;
+	float: left;
+}
+
+
 /* Header */
 .site-header {
 	padding: 24px 0 0 0;
@@ -1681,6 +1710,7 @@ img#wpstats {
 		border-top: none;
 		box-shadow: none;
 	}
+
 	.site-content {
 		margin: 0;
 		width: auto;

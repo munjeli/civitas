@@ -30,6 +30,11 @@ function add_my_scripts() {
 		wp_enqueue_script('civitas-map');
 		wp_enqueue_script('google-maps','http://maps.googleapis.com/maps/api/js?key=AIzaSyCnAIvFm-zT9L-BTQ5teKRSBMHqbsjlz44&sensor=false');
 	}
+	elseif(is_page_template('page-templates/calendar-template.php' || 'columned-template.php')){
+		
+		wp_register_script( 'civitas-column', get_template_directory_uri() . '/js/civitas-column.js', array('jquery'));
+		wp_enqueue_script('civitas-column');		
+	}
 	else{}
 }
 
