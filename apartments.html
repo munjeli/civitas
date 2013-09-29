@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>Apartments</title>
+		<meta name="description" content="Low Income Apartments in Seattle with Available Units" />
+		<meta name="author" content="Ele Munjeli" />
+
+		<link rel="stylesheet" href="css/styles.css"/>
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link type="text/javascript" href='js/jquery-1.9.1.js'/>
+		<link type="text/javascript" href='js/gmap3.js'/>
+		
+		
+		<!--the script to load the google maps API-->
+		<script type='text/javascript' src='js/jquery-1.9.1.js'></script>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCnAIvFm-zT9L-BTQ5teKRSBMHqbsjlz44&sensor=false"></script>
+		<script type="text/javascript" src="js/gmap3.js"></script>
+		
+		
+		
+		<script type="text/javascript">
+		$(document).ready(function() { 
+			alert('hello world');
+			var geocoder = new google.maps.Geocoder();
+			var apartmentList = [];
+			
+			
+			$.get('apartments-table.html', function(data){				
+							
+							var aptloc = [];
+							var name = $('a', data).html();
+							var pagelink = $('a', data).attr('href');
+							var address = $('font', data).slice(1).html() + ', Seattle, WA';
+							
+							getAptCoords(address);
+
+						    function getAptCoords(address, fn){
+							  geocoder.geocode( { 'address': address}, function(results, status) {
+							  	 fn(results[0].geometry.location)
+							     aptloc.push = (name, pagelink, address); 
+							     alert(aptloc);
+							  });
+							}
+							
+						  
+				    
+				    
+				    
+					
+			});
+				     
+				
+			
+		
+	$('div#cityMap').gmap3({
+			map:{
+				options:{
+					center:[47.617273,-122.332871],
+					zoom: 13,
+					mapTypeId:google.maps.MapTypeId.ROADMAP					
+				}				
+			}
+		});
+		
+		
+		});
+		</script>
+	
+	</head>
+
+	<body>
+		<div>
+			<header>
+				<h1>Apartments</h1>
+			</header>
+			<nav>
+			</nav>
+			<div id="cityMap" ></div>
+
+
+			<footer>
+			</footer>
+		</div>
+	</body>
+</html>
